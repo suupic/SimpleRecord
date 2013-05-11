@@ -20,6 +20,8 @@
         @"NSString" , @"name",
         @"NSInteger" , @"authorId", nil]];
     }
+    enum enum_DataType enum_dataType;
+    enum_dataType = String;
     return self;
 }
 

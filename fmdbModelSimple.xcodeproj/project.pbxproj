@@ -26,10 +26,12 @@
 		9D95123D1734388700A2472F /* FMSBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D95123C1734388700A2472F /* FMSBook.m */; };
 		9D9512401734392900A2472F /* FMSAuthor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D95123F1734392900A2472F /* FMSAuthor.m */; };
 		9D95124217343B9600A2472F /* libobjc.A.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D95124117343B9600A2472F /* libobjc.A.dylib */; };
+		D747F21B29562B31522829CC /* SimpleRecordColumn.m in Sources */ = {isa = PBXBuildFile; fileRef = D747F0A6D417993F81260662 /* SimpleRecordColumn.m */; };
 		D747F53D47C7167D60FBE0F7 /* SimpleRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = D747FDC57AE0736784A6E88E /* SimpleRecord.m */; };
 		D747F87A0D99A5756B61B43A /* SimpleRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = D747FDC57AE0736784A6E88E /* SimpleRecord.m */; };
 		D747F9682E978F2354854A81 /* SimpleRecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D747F07743676184858B8586 /* SimpleRecordModel.m */; };
 		D747FC256ED21F3A40DFDA8A /* SimpleRecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D747F07743676184858B8586 /* SimpleRecordModel.m */; };
+		D747FC32C088AF6B5C417AB9 /* SimpleRecordColumn.m in Sources */ = {isa = PBXBuildFile; fileRef = D747F0A6D417993F81260662 /* SimpleRecordColumn.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,8 +74,11 @@
 		9D95123F1734392900A2472F /* FMSAuthor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMSAuthor.m; sourceTree = "<group>"; };
 		9D95124117343B9600A2472F /* libobjc.A.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libobjc.A.dylib; path = usr/lib/libobjc.A.dylib; sourceTree = SDKROOT; };
 		D747F07743676184858B8586 /* SimpleRecordModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleRecordModel.m; sourceTree = "<group>"; };
+		D747F0A6D417993F81260662 /* SimpleRecordColumn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleRecordColumn.m; sourceTree = "<group>"; };
+		D747F2727934EA0AB47AB633 /* SimpleRecordColumn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleRecordColumn.h; sourceTree = "<group>"; };
 		D747F2AF8A016ECEF188671F /* SimpleRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleRecord.h; sourceTree = "<group>"; };
 		D747F7D12DEBF39243D813BD /* SimpleRecordModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleRecordModel.h; sourceTree = "<group>"; };
+		D747FC8B1EA8F6767F0D8932 /* SimpleRecordEnumConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleRecordEnumConstants.h; sourceTree = "<group>"; };
 		D747FDC57AE0736784A6E88E /* SimpleRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleRecord.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -160,6 +165,9 @@
 				D747F7D12DEBF39243D813BD /* SimpleRecordModel.h */,
 				D747FDC57AE0736784A6E88E /* SimpleRecord.m */,
 				D747F2AF8A016ECEF188671F /* SimpleRecord.h */,
+				D747FC8B1EA8F6767F0D8932 /* SimpleRecordEnumConstants.h */,
+				D747F0A6D417993F81260662 /* SimpleRecordColumn.m */,
+				D747F2727934EA0AB47AB633 /* SimpleRecordColumn.h */,
 			);
 			path = fmdbModelSimple;
 			sourceTree = "<group>";
@@ -344,6 +352,7 @@
 				9D9512401734392900A2472F /* FMSAuthor.m in Sources */,
 				D747FC256ED21F3A40DFDA8A /* SimpleRecordModel.m in Sources */,
 				D747F53D47C7167D60FBE0F7 /* SimpleRecord.m in Sources */,
+				D747FC32C088AF6B5C417AB9 /* SimpleRecordColumn.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +363,7 @@
 				9D951232173437EA00A2472F /* fmdbModelSimpleTests.m in Sources */,
 				D747F9682E978F2354854A81 /* SimpleRecordModel.m in Sources */,
 				D747F87A0D99A5756B61B43A /* SimpleRecord.m in Sources */,
+				D747F21B29562B31522829CC /* SimpleRecordColumn.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,17 +24,71 @@ FMDatabase *db;
 }
 
 + (BOOL)createTable {
-    if([self isTableExist]){
-       NSLog(@"Table %@ exist.", [self tableName]);
-       return YES;
-    }else{
-       BOOL result = [db executeUpdate:@"CREATE TABLE FMSBOOK ( \
-     uid INTEGER PRIMARY KEY AUTOINCREMENT, \
-     name VARCHAR(512) NOT NULL DEFAULT '', \
-     authorId INTEGER DEFAULT 0 \
-	 )"];
-       return result;
+//    if([self isTableExist]){
+//       NSLog(@"Table %@ exist.", [self tableName]);
+//       return YES;
+//    }else{
+//    }else{
+//       BOOL result = [db executeUpdate:@"CREATE TABLE FMSBOOK ( \
+//     uid INTEGER PRIMARY KEY AUTOINCREMENT, \
+//     name VARCHAR(512) NOT NULL DEFAULT '', \
+//     authorId INTEGER DEFAULT 0 \
+//	 )"];
+//       return result;
+//    }
+
+    NSString *tableName = [self tableName];
+    NSMutableDictionary *properties = ar_attributes;
+    __block NSString *sqlString = @"";
+    __block NSString *values = @"";
+
+    [properties enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop){
+        NSString *columnName = [[NSString stringWithFormat:@"%@", key] lowercaseString];
+        NSString *columnType = [[NSString stringWithFormat:@"%@", obj] lowercaseString];
+
+        NSString *columnString = @"";
+        NSString *value = @"";
+
+        NSLog(@"columnName =%@", columnName);
+        if([columnName isEqualToString:@"uid"]) {
+            columnString = @"uid INTEGER PRIMARY KEY AUTOINCREMENT";
+        } else if([columnType isEqualToString:@"nsinteger"]){
+            columnString = [NSString stringWithFormat:@", %@ INTEGER NOT NULL DEFAULT 0", columnName];
+        } else if([columnType isEqualToString:@"nsstring"]){
+            columnString = [NSString stringWithFormat:@", %@ VARCHAR(512) NOT NULL DEFAULT ''", columnName];
+        } else if([columnType isEqualToString:@"nsdate"]){
+            columnString = @"uid INTEGER PRIMARY KEY AUTOINCREMENT";
+        }
+
+        sqlString = [sqlString stringByAppendingString:columnString] ;
+        if (value) {
+            values = [values stringByAppendingString:value];
+        } else {
+            values = [values stringByAppendingString:Nil];
+        }
+    }];
+
+    NSString *query = [NSString stringWithFormat:@"CREATE TABLE %@(%@);",
+                                                 tableName,
+                                                 sqlString];
+    NSLog(@"Create table: %@", query);
+    [db beginTransaction];
+    BOOL boolresult = [db executeUpdate:query];
+
+    if (boolresult) {
+        db.commit;
+        NSLog(@"commit success");
+    } else {
+        db.rollback;
     }
+
+//    FMResultSet *s = [self.class findOne];
+    FMResultSet *s = [self.class findByUID:69];
+    while ([s next]) {
+        NSLog(@"uid: %@", [s stringForColumn:@"uid"]);
+        NSLog(@"name: %@", [s stringForColumn:@"NAME"]);
+    }
+    return boolresult;
 }
 
 + (BOOL)isTableExist {
@@ -69,7 +123,7 @@ FMDatabase *db;
 
 - (BOOL) save {
     NSString *tableName = [self.class tableName];
-    NSMutableDictionary *properties = self.ar_attributes;
+    NSMutableDictionary *properties = ar_attributes;
     __block NSString *columnNames = @"";
     __block NSString *values = @"";
 
@@ -132,10 +186,10 @@ FMDatabase *db;
     return NO;
 }
 - (NSMutableDictionary *)attr_accessor:(NSDictionary *)attributes {
-    self.ar_attributes = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+    ar_attributes = [NSMutableDictionary dictionaryWithObjectsAndKeys:
             @"NSInteger" , @"uid", nil];
-    [self.ar_attributes addEntriesFromDictionary:attributes];
-    return self.ar_attributes;
+    [ar_attributes addEntriesFromDictionary:attributes];
+    return ar_attributes;
 }
 
 + (NSString *)tableName {

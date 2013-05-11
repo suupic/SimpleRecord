@@ -21,11 +21,12 @@ FMDatabase *db;
 
 @end
 
+static NSMutableDictionary *ar_attributes;
+
 @interface SimpleRecordModel : NSObject
 
 // define delegate property
 @property (nonatomic, assign) id delegate;
-@property (nonatomic, assign) NSMutableDictionary *ar_attributes;
 
 - (BOOL) save;
 - (BOOL) updateAttributes:(NSDictionary *)attributes;

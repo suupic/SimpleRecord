@@ -23,8 +23,9 @@
 
     [SimpleRecord use:@"/tmp/tmp.db"];
     [FMSBook dropTable];
-    [FMSBook createTable];
     FMSBook *book = [[FMSBook alloc] init];
+    [FMSBook createTable];
+
     book.name = @"testbook12";
     book.authorId = [NSNumber numberWithInt:5];
     book.save;
