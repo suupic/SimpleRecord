@@ -14,7 +14,7 @@
 FMDatabase *db;
 
 // define the protocol for the delegate
-@protocol ARModelDelegate
+@protocol SimpleRecordModelDelegate
 
 // define protocol functions that can be used in any class using this delegate
 //+ (NSDictionary *)attr_accessor:(NSDictionary *)attributes;

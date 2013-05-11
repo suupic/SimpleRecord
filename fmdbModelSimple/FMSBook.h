@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "SimpleRecordModel.h"
 
-@interface FMSBook : SimpleRecordModel <ARModelDelegate, NSCoding>
+@interface FMSBook : SimpleRecordModel <SimpleRecordModelDelegate, NSCoding>
 
 @property (nonatomic)NSInteger *uid;
 @property (nonatomic)NSString *name;
