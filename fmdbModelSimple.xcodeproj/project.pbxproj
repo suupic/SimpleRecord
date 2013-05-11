@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A8019A5F7CA481CBAE3C1A3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60634B4BFDC64A70A8E0B577 /* libPods.a */; };
 		9D951201173437E900A2472F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D951200173437E900A2472F /* UIKit.framework */; };
 		9D951203173437E900A2472F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D951202173437E900A2472F /* Foundation.framework */; };
 		9D951205173437E900A2472F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D951204173437E900A2472F /* CoreGraphics.framework */; };
@@ -17,12 +18,18 @@
 		9D951215173437EA00A2472F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D951214173437EA00A2472F /* Default@2x.png */; };
 		9D951217173437EA00A2472F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D951216173437EA00A2472F /* Default-568h@2x.png */; };
 		9D95121A173437EA00A2472F /* FMSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D951219173437EA00A2472F /* FMSViewController.m */; };
-		9D95121D173437EA00A2472F /* FMSViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D95121B173437EA00A2472F /* FMSViewController.xib */; };
 		9D951225173437EA00A2472F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D951224173437EA00A2472F /* SenTestingKit.framework */; };
 		9D951226173437EA00A2472F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D951200173437E900A2472F /* UIKit.framework */; };
 		9D951227173437EA00A2472F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D951202173437E900A2472F /* Foundation.framework */; };
 		9D95122F173437EA00A2472F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9D95122D173437EA00A2472F /* InfoPlist.strings */; };
 		9D951232173437EA00A2472F /* fmdbModelSimpleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D951231173437EA00A2472F /* fmdbModelSimpleTests.m */; };
+		9D95123D1734388700A2472F /* FMSBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D95123C1734388700A2472F /* FMSBook.m */; };
+		9D9512401734392900A2472F /* FMSAuthor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D95123F1734392900A2472F /* FMSAuthor.m */; };
+		9D95124217343B9600A2472F /* libobjc.A.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D95124117343B9600A2472F /* libobjc.A.dylib */; };
+		D747F53D47C7167D60FBE0F7 /* AR.m in Sources */ = {isa = PBXBuildFile; fileRef = D747FDC57AE0736784A6E88E /* AR.m */; };
+		D747F87A0D99A5756B61B43A /* AR.m in Sources */ = {isa = PBXBuildFile; fileRef = D747FDC57AE0736784A6E88E /* AR.m */; };
+		D747F9682E978F2354854A81 /* ARModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D747F07743676184858B8586 /* ARModel.m */; };
+		D747FC256ED21F3A40DFDA8A /* ARModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D747F07743676184858B8586 /* ARModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4EAAC98AE1134974BF443D28 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		60634B4BFDC64A70A8E0B577 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D9511FD173437E900A2472F /* fmdbModelSimple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fmdbModelSimple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D951200173437E900A2472F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9D951202173437E900A2472F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -51,13 +60,21 @@
 		9D951216173437EA00A2472F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		9D951218173437EA00A2472F /* FMSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMSViewController.h; sourceTree = "<group>"; };
 		9D951219173437EA00A2472F /* FMSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMSViewController.m; sourceTree = "<group>"; };
-		9D95121C173437EA00A2472F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FMSViewController.xib; sourceTree = "<group>"; };
 		9D951223173437EA00A2472F /* fmdbModelSimpleTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fmdbModelSimpleTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D951224173437EA00A2472F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		9D95122C173437EA00A2472F /* fmdbModelSimpleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "fmdbModelSimpleTests-Info.plist"; sourceTree = "<group>"; };
 		9D95122E173437EA00A2472F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9D951230173437EA00A2472F /* fmdbModelSimpleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fmdbModelSimpleTests.h; sourceTree = "<group>"; };
 		9D951231173437EA00A2472F /* fmdbModelSimpleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = fmdbModelSimpleTests.m; sourceTree = "<group>"; };
+		9D95123B1734388700A2472F /* FMSBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMSBook.h; sourceTree = "<group>"; };
+		9D95123C1734388700A2472F /* FMSBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMSBook.m; sourceTree = "<group>"; };
+		9D95123E1734392900A2472F /* FMSAuthor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMSAuthor.h; sourceTree = "<group>"; };
+		9D95123F1734392900A2472F /* FMSAuthor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMSAuthor.m; sourceTree = "<group>"; };
+		9D95124117343B9600A2472F /* libobjc.A.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libobjc.A.dylib; path = usr/lib/libobjc.A.dylib; sourceTree = SDKROOT; };
+		D747F07743676184858B8586 /* ARModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARModel.m; sourceTree = "<group>"; };
+		D747F2AF8A016ECEF188671F /* AR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AR.h; sourceTree = "<group>"; };
+		D747F7D12DEBF39243D813BD /* ARModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARModel.h; sourceTree = "<group>"; };
+		D747FDC57AE0736784A6E88E /* AR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AR.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,9 +82,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D95124217343B9600A2472F /* libobjc.A.dylib in Frameworks */,
 				9D951201173437E900A2472F /* UIKit.framework in Frameworks */,
 				9D951203173437E900A2472F /* Foundation.framework in Frameworks */,
 				9D951205173437E900A2472F /* CoreGraphics.framework in Frameworks */,
+				9A8019A5F7CA481CBAE3C1A3 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,10 +106,12 @@
 		9D9511F4173437E900A2472F = {
 			isa = PBXGroup;
 			children = (
+				9D95124117343B9600A2472F /* libobjc.A.dylib */,
 				9D951206173437EA00A2472F /* fmdbModelSimple */,
 				9D95122A173437EA00A2472F /* fmdbModelSimpleTests */,
 				9D9511FF173437E900A2472F /* Frameworks */,
 				9D9511FE173437E900A2472F /* Products */,
+				4EAAC98AE1134974BF443D28 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +131,7 @@
 				9D951202173437E900A2472F /* Foundation.framework */,
 				9D951204173437E900A2472F /* CoreGraphics.framework */,
 				9D951224173437EA00A2472F /* SenTestingKit.framework */,
+				60634B4BFDC64A70A8E0B577 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -121,8 +143,15 @@
 				9D951210173437EA00A2472F /* FMSAppDelegate.m */,
 				9D951218173437EA00A2472F /* FMSViewController.h */,
 				9D951219173437EA00A2472F /* FMSViewController.m */,
-				9D95121B173437EA00A2472F /* FMSViewController.xib */,
 				9D951207173437EA00A2472F /* Supporting Files */,
+				9D95123B1734388700A2472F /* FMSBook.h */,
+				9D95123C1734388700A2472F /* FMSBook.m */,
+				9D95123E1734392900A2472F /* FMSAuthor.h */,
+				9D95123F1734392900A2472F /* FMSAuthor.m */,
+				D747F07743676184858B8586 /* ARModel.m */,
+				D747F7D12DEBF39243D813BD /* ARModel.h */,
+				D747FDC57AE0736784A6E88E /* AR.m */,
+				D747F2AF8A016ECEF188671F /* AR.h */,
 			);
 			path = fmdbModelSimple;
 			sourceTree = "<group>";
@@ -167,9 +196,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9D951235173437EA00A2472F /* Build configuration list for PBXNativeTarget "fmdbModelSimple" */;
 			buildPhases = (
+				ADC414BFB6D54F06A65B36E4 /* Check Pods Manifest.lock */,
 				9D9511F9173437E900A2472F /* Sources */,
 				9D9511FA173437E900A2472F /* Frameworks */,
 				9D9511FB173437E900A2472F /* Resources */,
+				ADBA6845637340C7ADE6B39F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -236,7 +267,6 @@
 				9D951213173437EA00A2472F /* Default.png in Resources */,
 				9D951215173437EA00A2472F /* Default@2x.png in Resources */,
 				9D951217173437EA00A2472F /* Default-568h@2x.png in Resources */,
-				9D95121D173437EA00A2472F /* FMSViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +294,34 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
+		ADBA6845637340C7ADE6B39F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+		ADC414BFB6D54F06A65B36E4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sanbox is not in sync with the Podfile.lock. Run 'pod install'.\nEOM\n    exit 1\nfi\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -274,6 +332,10 @@
 				9D95120D173437EA00A2472F /* main.m in Sources */,
 				9D951211173437EA00A2472F /* FMSAppDelegate.m in Sources */,
 				9D95121A173437EA00A2472F /* FMSViewController.m in Sources */,
+				9D95123D1734388700A2472F /* FMSBook.m in Sources */,
+				9D9512401734392900A2472F /* FMSAuthor.m in Sources */,
+				D747FC256ED21F3A40DFDA8A /* ARModel.m in Sources */,
+				D747F53D47C7167D60FBE0F7 /* AR.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +344,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D951232173437EA00A2472F /* fmdbModelSimpleTests.m in Sources */,
+				D747F9682E978F2354854A81 /* ARModel.m in Sources */,
+				D747F87A0D99A5756B61B43A /* AR.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,14 +366,6 @@
 				9D95120A173437EA00A2472F /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		9D95121B173437EA00A2472F /* FMSViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9D95121C173437EA00A2472F /* en */,
-			);
-			name = FMSViewController.xib;
 			sourceTree = "<group>";
 		};
 		9D95122D173437EA00A2472F /* InfoPlist.strings */ = {
@@ -381,22 +437,26 @@
 		};
 		9D951236173437EA00A2472F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EAAC98AE1134974BF443D28 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "fmdbModelSimple/fmdbModelSimple-Prefix.pch";
 				INFOPLIST_FILE = "fmdbModelSimple/fmdbModelSimple-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		9D951237173437EA00A2472F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EAAC98AE1134974BF443D28 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "fmdbModelSimple/fmdbModelSimple-Prefix.pch";
 				INFOPLIST_FILE = "fmdbModelSimple/fmdbModelSimple-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -454,6 +514,7 @@
 				9D951237173437EA00A2472F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9D951238173437EA00A2472F /* Build configuration list for PBXNativeTarget "fmdbModelSimpleTests" */ = {
 			isa = XCConfigurationList;
@@ -462,6 +523,7 @@
 				9D95123A173437EA00A2472F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -9,6 +9,7 @@
 #import "FMSAppDelegate.h"
 
 #import "FMSViewController.h"
+#import "FMSBook.h"
 
 @implementation FMSAppDelegate
 
@@ -19,6 +20,14 @@
     self.viewController = [[FMSViewController alloc] initWithNibName:@"FMSViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+
+    [FMSBook dropTable];
+    [FMSBook createTable];
+    FMSBook *book = [[FMSBook alloc] init];
+    book.name = @"testbook12";
+    book.authorId = [NSNumber numberWithInt:5];
+    book.save;
+
     return YES;
 }
 
@@ -30,7 +39,7 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
+    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 
