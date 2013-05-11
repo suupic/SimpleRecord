@@ -27,6 +27,7 @@ static NSMutableDictionary *ar_attributes;
 
 // define delegate property
 @property (nonatomic, assign) id delegate;
+@property (nonatomic, assign) NSInteger uid;
 
 - (BOOL) save;
 - (BOOL) updateAttributes:(NSDictionary *)attributes;

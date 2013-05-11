@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-//账本状态
-typedef NS_ENUM(NSUInteger, enum_DataType)
+//列数据类型
+typedef NS_ENUM(NSUInteger, ColumnDataType)
 {
-    String,
-    Integer,
-    Date,
-    DOUBLE
+    DateTypeString,
+    DateTypeInteger,
+    DateTypeDate,
+    DateTypeDOUBLE
 };

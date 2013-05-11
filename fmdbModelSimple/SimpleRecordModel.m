@@ -8,13 +8,13 @@
 
 #import <objc/runtime.h>
 #import "SimpleRecordModel.h"
-#import "FMDatabaseAdditions.h"
 
 FMDatabase *db;
 
 @implementation SimpleRecordModel
 
 @synthesize delegate;
+@synthesize uid;
 
 - (id)init {
     if (self = [super init]) {
@@ -24,32 +24,16 @@ FMDatabase *db;
 }
 
 + (BOOL)createTable {
-//    if([self isTableExist]){
-//       NSLog(@"Table %@ exist.", [self tableName]);
-//       return YES;
-//    }else{
-//    }else{
-//       BOOL result = [db executeUpdate:@"CREATE TABLE FMSBOOK ( \
-//     uid INTEGER PRIMARY KEY AUTOINCREMENT, \
-//     name VARCHAR(512) NOT NULL DEFAULT '', \
-//     authorId INTEGER DEFAULT 0 \
-//	 )"];
-//       return result;
-//    }
-
     NSString *tableName = [self tableName];
     NSMutableDictionary *properties = ar_attributes;
     __block NSString *sqlString = @"";
-    __block NSString *values = @"";
 
     [properties enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop){
         NSString *columnName = [[NSString stringWithFormat:@"%@", key] lowercaseString];
         NSString *columnType = [[NSString stringWithFormat:@"%@", obj] lowercaseString];
 
         NSString *columnString = @"";
-        NSString *value = @"";
 
-        NSLog(@"columnName =%@", columnName);
         if([columnName isEqualToString:@"uid"]) {
             columnString = @"uid INTEGER PRIMARY KEY AUTOINCREMENT";
         } else if([columnType isEqualToString:@"nsinteger"]){
@@ -61,11 +45,6 @@ FMDatabase *db;
         }
 
         sqlString = [sqlString stringByAppendingString:columnString] ;
-        if (value) {
-            values = [values stringByAppendingString:value];
-        } else {
-            values = [values stringByAppendingString:Nil];
-        }
     }];
 
     NSString *query = [NSString stringWithFormat:@"CREATE TABLE %@(%@);",
@@ -82,12 +61,6 @@ FMDatabase *db;
         db.rollback;
     }
 
-//    FMResultSet *s = [self.class findOne];
-    FMResultSet *s = [self.class findByUID:69];
-    while ([s next]) {
-        NSLog(@"uid: %@", [s stringForColumn:@"uid"]);
-        NSLog(@"name: %@", [s stringForColumn:@"NAME"]);
-    }
     return boolresult;
 }
 
@@ -129,7 +102,6 @@ FMDatabase *db;
 
     [properties enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop){
         NSString *propertyName = [NSString stringWithFormat:@"%@", key];
-//        NSString *propertyType = [NSString stringWithFormat:@"%@", obj];
 
         NSString *columnName = @"";
         NSString *value = @"";
@@ -169,12 +141,6 @@ FMDatabase *db;
         db.rollback;
     }
 
-//    FMResultSet *s = [self.class findOne];
-    FMResultSet *s = [self.class findByUID:69];
-    while ([s next]) {
-        NSLog(@"uid: %@", [s stringForColumn:@"uid"]);
-        NSLog(@"name: %@", [s stringForColumn:@"NAME"]);
-    }
     return boolresult;
 }
 
@@ -209,17 +175,47 @@ FMDatabase *db;
 
 + (id)findByUID:(NSInteger)uid {
     FMResultSet *s = [db executeQuery:[NSString stringWithFormat:@"SELECT * FROM %@ WHERE uid=%d;", [self tableName], uid]];
-    return s;
+    id obj = [self.class parsedObject:s];
+    return obj;
 }
 
 + (BOOL)deleteByUID:(NSInteger)uid {
     return NO;
 }
 
-//- (id)parsedObject:(FMResultSet *)fmResultSet {
-//    [fmResultSet
-//    id obj = [[[self class] alloc]init];
-//    return obj;
-//}
++ (id)parsedObject:(FMResultSet *)fmResultSet {
+    FMResultSet *s = fmResultSet;
+    NSString *tableName = [self tableName];
+    NSMutableDictionary *properties = ar_attributes;
+
+    id parsedObject = [[self alloc]init];
+
+    while ([s next]) {
+        [properties enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop){
+            NSString *columnName = [[NSString stringWithFormat:@"%@", key] lowercaseString];
+            NSString *columnType = [[NSString stringWithFormat:@"%@", obj] lowercaseString];
+
+            id value;
+            if([columnType isEqualToString:@"nsstring"]){
+                value = [s stringForColumn:columnName];
+            } else if([columnType isEqualToString:@"nsinteger"]){
+                value = [NSNumber numberWithInt:[s intForColumn:columnName]];
+            } else if([columnType isEqualToString:@"nsdate"]){
+                value = [s dataForColumn:columnName];
+            }
+            if(value){
+                NSString *actionName = [NSString stringWithFormat:@"set%@", [columnName capitalizedString]];
+                SEL sel = sel_registerName([actionName UTF8String]);
+#pragma clang diagnostic push  //用于忽略performSelector的“performselector may cause a leak because its selector is unknow”警告
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+//                [parsedObject performSelector:sel] = value;
+                [parsedObject performSelector:sel withObject:value];
+//                [parsedObject setValue:value forKey:columnName];
+#pragma clang diagnostic pop
+            }
+        }];
+    }
+    return parsedObject;
+}
 
 @end

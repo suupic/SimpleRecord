@@ -2,25 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="192af39a-8aa1-42c1-bd3b-3c97412f7387" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fmdbModelSimple/SimpleRecordColumn.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fmdbModelSimple/SimpleRecordColumn.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fmdbModelSimple/SimpleRecordEnumConstants.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fmdbModelSimple/FMSAppDelegate.m" afterPath="$PROJECT_DIR$/fmdbModelSimple/FMSAppDelegate.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fmdbModelSimple/FMSBook.m" afterPath="$PROJECT_DIR$/fmdbModelSimple/FMSBook.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fmdbModelSimple/SimpleRecord.h" afterPath="$PROJECT_DIR$/fmdbModelSimple/SimpleRecord.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fmdbModelSimple/SimpleRecordColumn.h" afterPath="$PROJECT_DIR$/fmdbModelSimple/SimpleRecordColumn.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fmdbModelSimple/SimpleRecordColumn.m" afterPath="$PROJECT_DIR$/fmdbModelSimple/SimpleRecordColumn.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fmdbModelSimple/SimpleRecordEnumConstants.h" afterPath="$PROJECT_DIR$/fmdbModelSimple/SimpleRecordEnumConstants.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fmdbModelSimple/SimpleRecordModel.h" afterPath="$PROJECT_DIR$/fmdbModelSimple/SimpleRecordModel.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fmdbModelSimple/SimpleRecordModel.m" afterPath="$PROJECT_DIR$/fmdbModelSimple/SimpleRecordModel.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fmdbModelSimple.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/fmdbModelSimple.xcodeproj/project.pbxproj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="fmdbModelSimple.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="192af39a-8aa1-42c1-bd3b-3c97412f7387" time="1368298123315" ignored="false" />
-    <file path="/FMSBook.m" changelist="192af39a-8aa1-42c1-bd3b-3c97412f7387" time="1368301710990" ignored="false" />
-    <file path="/FMSBook.h" changelist="192af39a-8aa1-42c1-bd3b-3c97412f7387" time="1368298483655" ignored="false" />
+    <file path="/FMSBook.m" changelist="192af39a-8aa1-42c1-bd3b-3c97412f7387" time="1368308807601" ignored="false" />
+    <file path="/FMSBook.h" changelist="192af39a-8aa1-42c1-bd3b-3c97412f7387" time="1368307473648" ignored="false" />
     <file path="/ARModel.m" changelist="192af39a-8aa1-42c1-bd3b-3c97412f7387" time="1368293622510" ignored="false" />
     <file path="/ARModel.h" changelist="192af39a-8aa1-42c1-bd3b-3c97412f7387" time="1368256074335" ignored="false" />
-    <file path="/FMSAppDelegate.m" changelist="192af39a-8aa1-42c1-bd3b-3c97412f7387" time="1368294682068" ignored="false" />
+    <file path="/FMSAppDelegate.m" changelist="192af39a-8aa1-42c1-bd3b-3c97412f7387" time="1368308984342" ignored="false" />
     <file path="/a.dummy" changelist="192af39a-8aa1-42c1-bd3b-3c97412f7387" time="1368221535115" ignored="false" />
     <file path="/AR.h" changelist="192af39a-8aa1-42c1-bd3b-3c97412f7387" time="1368293583913" ignored="false" />
     <file path="/AR.m" changelist="192af39a-8aa1-42c1-bd3b-3c97412f7387" time="1368224583338" ignored="false" />
@@ -39,9 +37,9 @@
     <file path="$PROJECT_DIR$/../bluetiger/AA/Classes/Models/Contact/BTTUser.h" changelist="192af39a-8aa1-42c1-bd3b-3c97412f7387" time="1368298391002" ignored="false" />
     <file path="$PROJECT_DIR$/../bluetiger/AA/Classes/Models/Contact/BTTUser.m" changelist="192af39a-8aa1-42c1-bd3b-3c97412f7387" time="1368298331093" ignored="false" />
     <file path="/BTTUser.h" changelist="192af39a-8aa1-42c1-bd3b-3c97412f7387" time="1368298370799" ignored="false" />
-    <file path="/SimpleRecordModel.m" changelist="192af39a-8aa1-42c1-bd3b-3c97412f7387" time="1368304025586" ignored="false" />
-    <file path="/SimpleRecordModel.h" changelist="192af39a-8aa1-42c1-bd3b-3c97412f7387" time="1368300456559" ignored="false" />
-    <file path="/SimpleRecordEnumConstants.h" changelist="192af39a-8aa1-42c1-bd3b-3c97412f7387" time="1368301700556" ignored="false" />
+    <file path="/SimpleRecordModel.m" changelist="192af39a-8aa1-42c1-bd3b-3c97412f7387" time="1368308692732" ignored="false" />
+    <file path="/SimpleRecordModel.h" changelist="192af39a-8aa1-42c1-bd3b-3c97412f7387" time="1368305026434" ignored="false" />
+    <file path="/SimpleRecordEnumConstants.h" changelist="192af39a-8aa1-42c1-bd3b-3c97412f7387" time="1368304445007" ignored="false" />
     <file path="/SimpleRecordColumn.h" changelist="192af39a-8aa1-42c1-bd3b-3c97412f7387" time="1368302955324" ignored="false" />
     <file path="/SimpleRecordColumn.m" changelist="192af39a-8aa1-42c1-bd3b-3c97412f7387" time="1368303396046" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -63,70 +61,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="FMSAppDelegate.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fmdbModelSimple/FMSAppDelegate.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="0" selection-start="848" selection-end="848" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SimpleRecord.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fmdbModelSimple/SimpleRecord.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="40" selection-start="477" selection-end="477" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#171#204#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SimpleRecord.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fmdbModelSimple/SimpleRecord.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="5" selection-start="543" selection-end="543" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SimpleRecordColumn.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fmdbModelSimple/SimpleRecordColumn.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="1" selection-start="828" selection-end="828" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#245#262#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SimpleRecordColumn.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fmdbModelSimple/SimpleRecordColumn.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="49" selection-start="648" selection-end="648" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#171#204#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="FMSBook.m" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fmdbModelSimple/FMSBook.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="16" selection-start="518" selection-end="518" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="23" column="24" selection-start="497" selection-end="497" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#182#198#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SimpleRecordEnumConstants.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fmdbModelSimple/SimpleRecordEnumConstants.h">
+      <file leaf-file-name="FMSBook.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fmdbModelSimple/FMSBook.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="34" selection-start="306" selection-end="306" vertical-scroll-proportion="0.0">
+            <state line="9" column="62" selection-start="199" selection-end="199" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -135,7 +84,7 @@
       <file leaf-file-name="SimpleRecordModel.h" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fmdbModelSimple/SimpleRecordModel.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="34" selection-start="1013" selection-end="1013" vertical-scroll-proportion="0.0">
+            <state line="29" column="39" selection-start="706" selection-end="715" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#171#204#0" expanded="true" />
               </folding>
@@ -143,12 +92,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SimpleRecordModel.m" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="FMSAppDelegate.m" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/fmdbModelSimple/FMSAppDelegate.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="20" selection-start="972" selection-end="972" vertical-scroll-proportion="0.754717">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SimpleRecordModel.m" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fmdbModelSimple/SimpleRecordModel.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="61" selection-start="2072" selection-end="2072" vertical-scroll-proportion="-0.69509596">
+            <state line="190" column="24" selection-start="5940" selection-end="5940" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#171#195#0" expanded="true" />
+                <element signature="e#279#300#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -179,15 +138,15 @@
         <option value="$PROJECT_DIR$/fmdbModelSimple/AR.h" />
         <option value="$PROJECT_DIR$/fmdbModelSimple/ARModel.m" />
         <option value="$PROJECT_DIR$/fmdbModelSimple/SimpleRecord.m" />
-        <option value="$PROJECT_DIR$/fmdbModelSimple/FMSBook.h" />
+        <option value="$PROJECT_DIR$/fmdbModelSimple/SimpleRecord.h" />
+        <option value="$PROJECT_DIR$/fmdbModelSimple/SimpleRecordEnumConstants.h" />
+        <option value="$PROJECT_DIR$/fmdbModelSimple/SimpleRecordColumn.h" />
+        <option value="$PROJECT_DIR$/fmdbModelSimple/SimpleRecordColumn.m" />
         <option value="$PROJECT_DIR$/fmdbModelSimple/SimpleRecordModel.h" />
         <option value="$PROJECT_DIR$/fmdbModelSimple/FMSBook.m" />
-        <option value="$PROJECT_DIR$/fmdbModelSimple/SimpleRecordEnumConstants.h" />
-        <option value="$PROJECT_DIR$/fmdbModelSimple/SimpleRecordColumn.m" />
-        <option value="$PROJECT_DIR$/fmdbModelSimple/SimpleRecordColumn.h" />
-        <option value="$PROJECT_DIR$/fmdbModelSimple/FMSAppDelegate.m" />
         <option value="$PROJECT_DIR$/fmdbModelSimple/SimpleRecordModel.m" />
-        <option value="$PROJECT_DIR$/fmdbModelSimple/SimpleRecord.h" />
+        <option value="$PROJECT_DIR$/fmdbModelSimple/FMSBook.h" />
+        <option value="$PROJECT_DIR$/fmdbModelSimple/FMSAppDelegate.m" />
       </list>
     </option>
   </component>
@@ -432,11 +391,11 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16041501" sideWeight="0.28267476" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20430966" sideWeight="0.4969605" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20430966" sideWeight="0.34954408" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.387538" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20430966" sideWeight="0.2781155" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20430966" sideWeight="0.19604863" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22492401" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4544073" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -506,7 +465,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="27" />
+      <option name="time" value="31" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -552,83 +511,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fmdbModelSimple/FMSBook.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="65" selection-start="266" selection-end="266" vertical-scroll-proportion="0.31120333">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fmdbModelSimple/SimpleRecordEnumConstants.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="34" selection-start="306" selection-end="306" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fmdbModelSimple/FMSBook.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="16" selection-start="518" selection-end="518" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fmdbModelSimple/FMSAppDelegate.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="848" selection-end="848" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fmdbModelSimple/SimpleRecord.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="5" selection-start="543" selection-end="543" vertical-scroll-proportion="0.0">
+        <state line="29" column="5" selection-start="543" selection-end="543" vertical-scroll-proportion="0.26507938">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fmdbModelSimple/SimpleRecord.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="40" selection-start="477" selection-end="477" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#171#204#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fmdbModelSimple/SimpleRecordColumn.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="49" selection-start="648" selection-end="648" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#171#204#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fmdbModelSimple/SimpleRecordColumn.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="1" selection-start="828" selection-end="828" vertical-scroll-proportion="0.0">
+        <state line="21" column="69" selection-start="415" selection-end="415" vertical-scroll-proportion="0.990566">
           <folding>
             <element signature="e#245#262#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fmdbModelSimple/SimpleRecordModel.h">
+    <entry file="file://$PROJECT_DIR$/fmdbModelSimple/SimpleRecordColumn.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="34" selection-start="1013" selection-end="1013" vertical-scroll-proportion="0.0">
+        <state line="14" column="57" selection-start="332" selection-end="332" vertical-scroll-proportion="0.6603774">
           <folding>
             <element signature="e#171#204#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/fmdbModelSimple/SimpleRecordEnumConstants.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="25" selection-start="213" selection-end="213" vertical-scroll-proportion="0.4531722">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fmdbModelSimple/SimpleRecord.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="40" selection-start="477" selection-end="477" vertical-scroll-proportion="0.5468278">
+          <folding>
+            <element signature="e#171#204#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fmdbModelSimple/FMSBook.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="24" selection-start="497" selection-end="497" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#182#198#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/fmdbModelSimple/SimpleRecordModel.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="61" selection-start="2072" selection-end="2072" vertical-scroll-proportion="-0.69509596">
+        <state line="190" column="24" selection-start="5940" selection-end="5940" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#171#195#0" expanded="true" />
+            <element signature="e#279#300#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fmdbModelSimple/SimpleRecordModel.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="39" selection-start="706" selection-end="715" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#171#204#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fmdbModelSimple/FMSBook.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="62" selection-start="199" selection-end="199" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fmdbModelSimple/FMSAppDelegate.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="20" selection-start="972" selection-end="972" vertical-scroll-proportion="0.754717">
+          <folding />
         </state>
       </provider>
     </entry>

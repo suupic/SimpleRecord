@@ -19,7 +19,7 @@
 @synthesize isPK;
 @synthesize defaultValue;
 
-+ (SimpleRecordColumn *)init:(NSString *)name type:(enum_DataType)type isNull:(BOOL)isNull isPK:(BOOL)isPK default:(id)defaultValue {
++ (SimpleRecordColumn *)init:(NSString *)name type:(ColumnDataType)type isNull:(BOOL)isNull isPK:(BOOL)isPK default:(id)defaultValue {
     SimpleRecordColumn *column = [[self alloc] init];
     if(!name || !type) {
         return nil;

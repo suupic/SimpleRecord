@@ -29,6 +29,7 @@
     book.name = @"testbook12";
     book.authorId = [NSNumber numberWithInt:5];
     book.save;
+//    [FMSBook findByUID:1];
 
     return YES;
 }

@@ -13,11 +13,11 @@
 @interface SimpleRecordColumn : NSObject
 
 @property (nonatomic, assign) NSString *name;
-@property (nonatomic, assign) enum_DataType type;
+@property (nonatomic, assign) ColumnDataType type;
 @property (nonatomic, assign) BOOL isNull;
 @property (nonatomic, assign) BOOL isPK;
 @property (nonatomic, assign) id defaultValue;
 
-+ (SimpleRecordColumn *)init:(NSString *)name type:(enum_DataType)type isNull:(BOOL)isNull isPK:(BOOL)isPK default:(id)defaultValue;
++ (SimpleRecordColumn *)init:(NSString *)name type:(ColumnDataType)type isNull:(BOOL)isNull isPK:(BOOL)isPK default:(id)defaultValue;
 
 @end
