@@ -12,9 +12,7 @@
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "78"
-         endingLineNumber = "78"
-         landmarkName = "-save"
-         landmarkType = "5">
+         endingLineNumber = "78">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -25,8 +23,19 @@
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "77"
-         endingLineNumber = "77"
-         landmarkName = "-save"
+         endingLineNumber = "77">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "fmdbModelSimple/SimpleRecord.m"
+         timestampString = "389987236.707776"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "43"
+         endingLineNumber = "43"
+         landmarkName = "-establishConnection"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

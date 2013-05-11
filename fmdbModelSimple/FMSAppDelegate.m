@@ -21,6 +21,7 @@
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
 
+    [SimpleRecord use:@"/tmp/tmp.db"];
     [FMSBook dropTable];
     [FMSBook createTable];
     FMSBook *book = [[FMSBook alloc] init];

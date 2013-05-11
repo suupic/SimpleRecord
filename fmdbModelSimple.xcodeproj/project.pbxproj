@@ -26,10 +26,10 @@
 		9D95123D1734388700A2472F /* FMSBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D95123C1734388700A2472F /* FMSBook.m */; };
 		9D9512401734392900A2472F /* FMSAuthor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D95123F1734392900A2472F /* FMSAuthor.m */; };
 		9D95124217343B9600A2472F /* libobjc.A.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D95124117343B9600A2472F /* libobjc.A.dylib */; };
-		D747F53D47C7167D60FBE0F7 /* AR.m in Sources */ = {isa = PBXBuildFile; fileRef = D747FDC57AE0736784A6E88E /* AR.m */; };
-		D747F87A0D99A5756B61B43A /* AR.m in Sources */ = {isa = PBXBuildFile; fileRef = D747FDC57AE0736784A6E88E /* AR.m */; };
-		D747F9682E978F2354854A81 /* ARModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D747F07743676184858B8586 /* ARModel.m */; };
-		D747FC256ED21F3A40DFDA8A /* ARModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D747F07743676184858B8586 /* ARModel.m */; };
+		D747F53D47C7167D60FBE0F7 /* SimpleRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = D747FDC57AE0736784A6E88E /* SimpleRecord.m */; };
+		D747F87A0D99A5756B61B43A /* SimpleRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = D747FDC57AE0736784A6E88E /* SimpleRecord.m */; };
+		D747F9682E978F2354854A81 /* SimpleRecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D747F07743676184858B8586 /* SimpleRecordModel.m */; };
+		D747FC256ED21F3A40DFDA8A /* SimpleRecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D747F07743676184858B8586 /* SimpleRecordModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,10 +71,10 @@
 		9D95123E1734392900A2472F /* FMSAuthor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMSAuthor.h; sourceTree = "<group>"; };
 		9D95123F1734392900A2472F /* FMSAuthor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMSAuthor.m; sourceTree = "<group>"; };
 		9D95124117343B9600A2472F /* libobjc.A.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libobjc.A.dylib; path = usr/lib/libobjc.A.dylib; sourceTree = SDKROOT; };
-		D747F07743676184858B8586 /* ARModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARModel.m; sourceTree = "<group>"; };
-		D747F2AF8A016ECEF188671F /* AR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AR.h; sourceTree = "<group>"; };
-		D747F7D12DEBF39243D813BD /* ARModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARModel.h; sourceTree = "<group>"; };
-		D747FDC57AE0736784A6E88E /* AR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AR.m; sourceTree = "<group>"; };
+		D747F07743676184858B8586 /* SimpleRecordModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleRecordModel.m; sourceTree = "<group>"; };
+		D747F2AF8A016ECEF188671F /* SimpleRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleRecord.h; sourceTree = "<group>"; };
+		D747F7D12DEBF39243D813BD /* SimpleRecordModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleRecordModel.h; sourceTree = "<group>"; };
+		D747FDC57AE0736784A6E88E /* SimpleRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleRecord.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,12 +103,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D8F4341173EB99C0000B3DA /* sample */ = {
+			isa = PBXGroup;
+			children = (
+				9D95120F173437EA00A2472F /* FMSAppDelegate.h */,
+				9D951210173437EA00A2472F /* FMSAppDelegate.m */,
+				9D951218173437EA00A2472F /* FMSViewController.h */,
+				9D951219173437EA00A2472F /* FMSViewController.m */,
+				9D95123B1734388700A2472F /* FMSBook.h */,
+				9D95123C1734388700A2472F /* FMSBook.m */,
+				9D95123E1734392900A2472F /* FMSAuthor.h */,
+				9D95123F1734392900A2472F /* FMSAuthor.m */,
+			);
+			name = sample;
+			sourceTree = "<group>";
+		};
 		9D9511F4173437E900A2472F = {
 			isa = PBXGroup;
 			children = (
-				9D95124117343B9600A2472F /* libobjc.A.dylib */,
 				9D951206173437EA00A2472F /* fmdbModelSimple */,
 				9D95122A173437EA00A2472F /* fmdbModelSimpleTests */,
+				9D95124117343B9600A2472F /* libobjc.A.dylib */,
 				9D9511FF173437E900A2472F /* Frameworks */,
 				9D9511FE173437E900A2472F /* Products */,
 				4EAAC98AE1134974BF443D28 /* Pods.xcconfig */,
@@ -139,19 +154,12 @@
 		9D951206173437EA00A2472F /* fmdbModelSimple */ = {
 			isa = PBXGroup;
 			children = (
-				9D95120F173437EA00A2472F /* FMSAppDelegate.h */,
-				9D951210173437EA00A2472F /* FMSAppDelegate.m */,
-				9D951218173437EA00A2472F /* FMSViewController.h */,
-				9D951219173437EA00A2472F /* FMSViewController.m */,
+				9D8F4341173EB99C0000B3DA /* sample */,
 				9D951207173437EA00A2472F /* Supporting Files */,
-				9D95123B1734388700A2472F /* FMSBook.h */,
-				9D95123C1734388700A2472F /* FMSBook.m */,
-				9D95123E1734392900A2472F /* FMSAuthor.h */,
-				9D95123F1734392900A2472F /* FMSAuthor.m */,
-				D747F07743676184858B8586 /* ARModel.m */,
-				D747F7D12DEBF39243D813BD /* ARModel.h */,
-				D747FDC57AE0736784A6E88E /* AR.m */,
-				D747F2AF8A016ECEF188671F /* AR.h */,
+				D747F07743676184858B8586 /* SimpleRecordModel.m */,
+				D747F7D12DEBF39243D813BD /* SimpleRecordModel.h */,
+				D747FDC57AE0736784A6E88E /* SimpleRecord.m */,
+				D747F2AF8A016ECEF188671F /* SimpleRecord.h */,
 			);
 			path = fmdbModelSimple;
 			sourceTree = "<group>";
@@ -178,7 +186,7 @@
 				9D95122B173437EA00A2472F /* Supporting Files */,
 			);
 			path = fmdbModelSimpleTests;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		9D95122B173437EA00A2472F /* Supporting Files */ = {
 			isa = PBXGroup;
@@ -334,8 +342,8 @@
 				9D95121A173437EA00A2472F /* FMSViewController.m in Sources */,
 				9D95123D1734388700A2472F /* FMSBook.m in Sources */,
 				9D9512401734392900A2472F /* FMSAuthor.m in Sources */,
-				D747FC256ED21F3A40DFDA8A /* ARModel.m in Sources */,
-				D747F53D47C7167D60FBE0F7 /* AR.m in Sources */,
+				D747FC256ED21F3A40DFDA8A /* SimpleRecordModel.m in Sources */,
+				D747F53D47C7167D60FBE0F7 /* SimpleRecord.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,8 +352,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D951232173437EA00A2472F /* fmdbModelSimpleTests.m in Sources */,
-				D747F9682E978F2354854A81 /* ARModel.m in Sources */,
-				D747F87A0D99A5756B61B43A /* AR.m in Sources */,
+				D747F9682E978F2354854A81 /* SimpleRecordModel.m in Sources */,
+				D747F87A0D99A5756B61B43A /* SimpleRecord.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,7 +412,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -428,7 +436,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -463,6 +471,7 @@
 		};
 		9D951239173437EA00A2472F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EAAC98AE1134974BF443D28 /* Pods.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/fmdbModelSimple.app/fmdbModelSimple";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -471,6 +480,10 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "fmdbModelSimple/fmdbModelSimple-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"${PODS_HEADERS_SEARCH_PATHS}/**",
+					"${PODS_ROOT}/BuildHeaders/**",
+				);
 				INFOPLIST_FILE = "fmdbModelSimpleTests/fmdbModelSimpleTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -480,6 +493,7 @@
 		};
 		9D95123A173437EA00A2472F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EAAC98AE1134974BF443D28 /* Pods.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/fmdbModelSimple.app/fmdbModelSimple";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -488,6 +502,10 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "fmdbModelSimple/fmdbModelSimple-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"${PODS_HEADERS_SEARCH_PATHS}/**",
+					"${PODS_ROOT}/BuildHeaders/**",
+				);
 				INFOPLIST_FILE = "fmdbModelSimpleTests/fmdbModelSimpleTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";

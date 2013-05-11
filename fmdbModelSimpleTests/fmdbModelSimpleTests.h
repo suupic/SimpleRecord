@@ -7,7 +7,18 @@
 //
 
 #import <SenTestingKit/SenTestingKit.h>
+#import "SimpleRecord.h"
 
-@interface fmdbModelSimpleTests : SenTestCase
+@class FMSBook;
+
+@interface fmdbModelSimpleTests :
+
+@property (nonatomic, strong) FMSBook *book;
+- (void)testCreateTable;
+- (void)testDropTable;
+- (void)testSave;
+- (void)testSave;
+- (void)testUpdate;
+- (void)testFindByUID;
 
 @end

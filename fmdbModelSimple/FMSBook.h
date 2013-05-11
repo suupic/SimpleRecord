@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ARModel.h"
+#import "SimpleRecordModel.h"
 
-@interface FMSBook : ARModel <ARModelDelegate, NSCoding>
+@interface FMSBook : SimpleRecordModel <ARModelDelegate, NSCoding>
 
 @property (nonatomic)NSInteger *uid;
 @property (nonatomic)NSString *name;

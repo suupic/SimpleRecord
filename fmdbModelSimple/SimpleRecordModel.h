@@ -7,10 +7,10 @@
 
 
 #import <Foundation/Foundation.h>
-#import "AR.h"
+#import "SimpleRecord.h"
 
 // declare our class
-@class ARModel;
+@class SimpleRecordModel;
 FMDatabase *db;
 
 // define the protocol for the delegate
@@ -21,7 +21,7 @@ FMDatabase *db;
 
 @end
 
-@interface ARModel : NSObject
+@interface SimpleRecordModel : NSObject
 
 // define delegate property
 @property (nonatomic, assign) id delegate;
@@ -35,8 +35,8 @@ FMDatabase *db;
 + (BOOL) isTableExist;
 + (FMResultSet *) findAll;
 + (FMResultSet *) findOne;
-+ (id) findByUID:(NSInteger *)uid;
-+ (BOOL *) deleteByUID:(NSInteger *)uid;
++ (id) findByUID:(NSInteger)uid;
++ (BOOL) deleteByUID:(NSInteger)uid;
 + (NSString *) tableName;
 
 - (NSMutableDictionary *)attr_accessor:(NSDictionary *)attributes;
