@@ -19,7 +19,6 @@
 - (void)testCreateTable;
 - (void)testDropTable;
 - (void)testSave;
-- (void)testSave;
 - (void)testUpdate;
 - (void)testFindByUID;
 

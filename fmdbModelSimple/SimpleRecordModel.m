@@ -25,27 +25,29 @@ FMDatabase *db;
 
 + (BOOL)createTable {
     NSString *tableName = [self tableName];
-    NSMutableDictionary *properties = ar_attributes;
-    __block NSString *sqlString = @"";
+    NSString *sqlString = @"";
 
-    [properties enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop){
-        NSString *columnName = [[NSString stringWithFormat:@"%@", key] lowercaseString];
-        NSString *columnType = [[NSString stringWithFormat:@"%@", obj] lowercaseString];
+    NSEnumerator *enumerator = [ar_attributes objectEnumerator];
+    SimpleRecordColumn *column;
 
-        NSString *columnString = @"";
+    while (column = [enumerator nextObject]) {
+            NSString *columnName = column.name.lowercaseString;
+            enum ColumnDataType *columnType = column.type;
 
-        if([columnName isEqualToString:@"id"]) {
-            columnString = @"id INTEGER PRIMARY KEY AUTOINCREMENT";
-        } else if([columnType isEqualToString:@"nsinteger"]){
-            columnString = [NSString stringWithFormat:@", %@ INTEGER NOT NULL DEFAULT 0", columnName];
-        } else if([columnType isEqualToString:@"nsstring"]){
-            columnString = [NSString stringWithFormat:@", %@ VARCHAR(512) NOT NULL DEFAULT ''", columnName];
-        } else if([columnType isEqualToString:@"nsdate"]){
-            columnString = @"id INTEGER PRIMARY KEY AUTOINCREMENT";
+            NSString *columnString = @"";
+
+            if ([columnName isEqualToString:@"id"]) {
+                columnString = @"id INTEGER PRIMARY KEY AUTOINCREMENT";
+            } else if (columnType == ColumnDataTypeInteger) {
+                columnString = [NSString stringWithFormat:@", %@ INTEGER NOT NULL DEFAULT 0", columnName];
+            } else if (columnType == ColumnDataTypeString) {
+                columnString = [NSString stringWithFormat:@", %@ VARCHAR(512) NOT NULL DEFAULT ''", columnName];
+            } else if (columnType == ColumnDataTypeDOUBLE) {
+                columnString = @"id INTEGER PRIMARY KEY AUTOINCREMENT";
+            }
+
+            sqlString = [sqlString stringByAppendingString:columnString];
         }
-
-        sqlString = [sqlString stringByAppendingString:columnString] ;
-    }];
 
     NSString *query = [NSString stringWithFormat:@"CREATE TABLE %@(%@);",
                                                  tableName,
@@ -101,31 +103,63 @@ FMDatabase *db;
     __block NSString *columnNames = @"";
     __block NSString *values = @"";
 
-    [properties enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop){
-        NSString *propertyName = [NSString stringWithFormat:@"%@", key];
+    NSEnumerator *enumerator = [ar_attributes objectEnumerator];
+    SimpleRecordColumn *column;
 
-        NSString *columnName = @"";
+    while (column = [enumerator nextObject]) {
+        NSString *columnName = column.name.lowercaseString;
+        NSString *columnString = @"";
         NSString *value = @"";
 
-        if ([propertyName isEqualToString:@"id"]) {
-            columnName = [NSString stringWithFormat:@"'%@'", propertyName];
+//        enum ColumnDataType *columnType = column.type;
+
+        if ([columnName isEqualToString:@"id"]) {
+            columnString = [NSString stringWithFormat:@"'%@'", columnName];
             value = @"NULL";
         } else {
-            columnName = [NSString stringWithFormat:@", '%@'", propertyName];
-            SEL sel = sel_registerName([propertyName UTF8String]);
-            #pragma clang diagnostic push  //用于忽略performSelector的“performselector may cause a leak because its selector is unknow”警告
-            #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+            columnString = [NSString stringWithFormat:@", '%@'", columnName];
+            SEL sel = sel_registerName([columnName UTF8String]);
+#pragma clang diagnostic push  //用于忽略performSelector的“performselector may cause a leak because its selector is unknow”警告
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
             value = [NSString stringWithFormat:@", '%@'", [[self performSelector:sel] description]];
-            #pragma clang diagnostic pop
+#pragma clang diagnostic pop
         }
 
-        columnNames = [columnNames stringByAppendingString:columnName] ;
+        columnNames = [columnNames stringByAppendingString:columnString] ;
         if (value) {
             values = [values stringByAppendingString:value];
         } else {
             values = [values stringByAppendingString:Nil];
         }
-    }];
+
+//        sqlString = [sqlString stringByAppendingString:columnString];
+    }
+
+//    [properties enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop){
+//        NSString *propertyName = [NSString stringWithFormat:@"%@", key];
+//
+//        NSString *columnName = @"";
+//        NSString *value = @"";
+//
+//        if ([propertyName isEqualToString:@"id"]) {
+//            columnName = [NSString stringWithFormat:@"'%@'", propertyName];
+//            value = @"NULL";
+//        } else {
+//            columnName = [NSString stringWithFormat:@", '%@'", propertyName];
+//            SEL sel = sel_registerName([propertyName UTF8String]);
+//            #pragma clang diagnostic push  //用于忽略performSelector的“performselector may cause a leak because its selector is unknow”警告
+//            #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+//            value = [NSString stringWithFormat:@", '%@'", [[self performSelector:sel] description]];
+//            #pragma clang diagnostic pop
+//        }
+//
+//        columnNames = [columnNames stringByAppendingString:columnName] ;
+//        if (value) {
+//            values = [values stringByAppendingString:value];
+//        } else {
+//            values = [values stringByAppendingString:Nil];
+//        }
+//    }];
 
     NSString *query = [NSString stringWithFormat:@"INSERT OR REPLACE INTO %@(%@) VALUES(%@);",
                                                  tableName,
@@ -152,10 +186,15 @@ FMDatabase *db;
 - (BOOL)delete {
     return NO;
 }
-- (NSMutableDictionary *)attr_accessor:(NSDictionary *)attributes {
-    ar_attributes = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-            @"NSInteger" , @"id", nil];
-    [ar_attributes addEntriesFromDictionary:attributes];
+- (NSMutableArray *)attr_accessor:(NSArray *)attributes {
+    SimpleRecordColumn *columnID = [[SimpleRecordColumn alloc] initWithParamers:@"id"
+                                                                           type:ColumnDataTypeString
+                                                                         isNull:NO
+                                                                           isPK:YES
+                                                                        default:Nil];
+    ar_attributes = [NSMutableArray arrayWithObject:columnID];
+    [ar_attributes addObjectsFromArray:attributes];
+
     return ar_attributes;
 }
 

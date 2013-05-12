@@ -18,6 +18,6 @@
 @property (nonatomic, assign) BOOL isPK;
 @property (nonatomic, assign) id defaultValue;
 
-+ (SimpleRecordColumn *)init:(NSString *)name type:(ColumnDataType)type isNull:(BOOL)isNull isPK:(BOOL)isPK default:(id)defaultValue;
+- (SimpleRecordColumn *)initWithParamers:(NSString *)name type:(ColumnDataType)type isNull:(BOOL)isNull isPK:(BOOL)isPK default:(id)defaultValue;
 
 @end

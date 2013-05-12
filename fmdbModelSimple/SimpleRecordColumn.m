@@ -19,18 +19,18 @@
 @synthesize isPK;
 @synthesize defaultValue;
 
-+ (SimpleRecordColumn *)init:(NSString *)name type:(ColumnDataType)type isNull:(BOOL)isNull isPK:(BOOL)isPK default:(id)defaultValue {
-    SimpleRecordColumn *column = [[self alloc] init];
-    if(!name || !type) {
-        return nil;
-    }else {
+- (SimpleRecordColumn *)initWithParamers:(NSString *)name type:(ColumnDataType)type isNull:(BOOL)isNull isPK:(BOOL)isPK default:(id)defaultValue {
+    SimpleRecordColumn *column = self;
+//    if(!name || !type) {
+//        return nil;
+//    }else {
         column.name = name;
         column.type = type;
         column.isNull = isNull ? isNull : NO;
         column.isPK = isPK ? isPK : NO;
         column.defaultValue = defaultValue ? defaultValue : Nil;
         return column;
-    }
+//    }
 }
 
 @end

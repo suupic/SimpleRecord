@@ -12,16 +12,52 @@
 
 @synthesize id;
 @synthesize name;
-@synthesize authorId;
+@synthesize avatar;
+@synthesize type;
+@synthesize source;
+@synthesize sourceAccount;
+@synthesize sourceNickname;
 
 - (id)init {
     if (self = [super init]) {
-        [self attr_accessor:[NSDictionary dictionaryWithObjectsAndKeys:
-        @"NSString" , @"name",
-        @"NSInteger" , @"authorId", nil]];
+//        [self attr_accessor:[NSDictionary dictionaryWithObjectsAndKeys:
+//        @"NSInteger", @"id",
+////        @"NSString" , @"name",
+////        @"NSString" , @"avatar",
+////        @"NSInteger", @"type",
+////        @"NSString" , @"source",
+////        @"NSString" , @"sourceAccount",
+//        @"NSString" , @"sourceNickname",nil]];
+//    }
+//    enum ColumnDataType enum_dataType;
+//    enum_dataType = 1;
+        [self attr_accessor:[NSArray arrayWithObjects:[[SimpleRecordColumn alloc] initWithParamers:@"name"
+                                                                                              type:ColumnDataTypeString
+                                                                                            isNull:NO
+                                                                                              isPK:NO
+                                                                                           default:Nil],
+                                                      [[SimpleRecordColumn alloc] initWithParamers:@"type"
+                                                                                              type:ColumnDataTypeInteger
+                                                                                            isNull:YES
+                                                                                              isPK:NO
+                                                                                           default:Nil],
+                                                      [[SimpleRecordColumn alloc] initWithParamers:@"source"
+                                                                                              type:ColumnDataTypeString
+                                                                                            isNull:YES
+                                                                                              isPK:NO
+                                                                                           default:Nil],
+//                                                      [[SimpleRecordColumn alloc] initWithParamers:@"sourceAccount"
+//                                                                                              type:ColumnDataTypeString
+//                                                                                            isNull:YES
+//                                                                                              isPK:NO
+//                                                                                           default:Nil],
+//                                                      [[SimpleRecordColumn alloc] initWithParamers:@"sourceNickname"
+//                                                                                              type:ColumnDataTypeString
+//                                                                                            isNull:YES
+//                                                                                              isPK:NO
+//                                                                                           default:Nil],
+                                                      nil]];
     }
-    enum ColumnDataType enum_dataType;
-    enum_dataType = 1;
     return self;
 }
 

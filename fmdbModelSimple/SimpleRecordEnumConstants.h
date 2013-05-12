@@ -11,8 +11,8 @@
 //列数据类型
 typedef NS_ENUM(NSUInteger, ColumnDataType)
 {
-    DateTypeString,
-    DateTypeInteger,
-    DateTypeDate,
-    DateTypeDOUBLE
+    ColumnDataTypeString,
+    ColumnDataTypeInteger,
+    ColumnDataTypeDate,
+    ColumnDataTypeDOUBLE
 };

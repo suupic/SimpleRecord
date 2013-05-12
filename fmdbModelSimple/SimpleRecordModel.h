@@ -21,7 +21,7 @@ FMDatabase *db;
 
 @end
 
-static NSMutableDictionary *ar_attributes;
+static NSMutableArray *ar_attributes;
 
 @interface SimpleRecordModel : NSObject
 
@@ -44,5 +44,5 @@ static NSMutableDictionary *ar_attributes;
 + (SimpleRecordRelation *)has_many:(SimpleRecordModel *)table;
 + (SimpleRecordRelation *)has_many:(SimpleRecordModel *)table through:(SimpleRecordModel *)table;
 
-- (NSMutableDictionary *)attr_accessor:(NSDictionary *)attributes;
+- (NSMutableArray *)attr_accessor:(NSArray *)attributes;
 @end

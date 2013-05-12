@@ -21,14 +21,14 @@
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
 
-    [SimpleRecord use:@"/tmp/tmp.db"];
-    [FMSBook dropTable];
-    FMSBook *book = [[FMSBook alloc] init];
-    [FMSBook createTable];
-
-    book.name = @"testbook12";
-    book.authorId = [NSNumber numberWithInt:5];
-    book.save;
+//    [SimpleRecord use:@"simpleRecordDev.db"];
+//    [FMSBook dropTable];
+//    FMSBook *book = [[FMSBook alloc] init];
+//    [FMSBook createTable];
+//
+//    book.name = @"testbook12";
+//    book.type = [NSNumber numberWithInt:5];
+//    book.save;
 //    [FMSBook findByUID:1];
 
     return YES;

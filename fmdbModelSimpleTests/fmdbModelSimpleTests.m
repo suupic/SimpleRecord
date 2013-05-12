@@ -21,7 +21,8 @@
     book = [[FMSBook alloc] init];
     [FMSBook createTable];
     book.name = @"testbook12";
-    book.authorId = [NSNumber numberWithInt:5];
+    book.sourceAccount = @"sk@gmail.com";
+//    book.authorId = [NSNumber numberWithInt:5];
 }
 
 - (void)tearDown
@@ -72,6 +73,46 @@
         name = [rs stringForColumn:@"name"];
     }
     STAssertTrue([name isEqualToString:book.name], name.description);
+}
+
+- (void)testColumnInitWithParameters{
+    NSArray *ar = [NSArray arrayWithObjects:[[SimpleRecordColumn alloc] initWithParamers:@"id"
+                                                                                           type:ColumnDataTypeInteger
+                                                                                         isNull:NO
+                                                                                           isPK:NO
+                                                                                        default:Nil],
+                                                   [[SimpleRecordColumn alloc] initWithParamers:@"name"
+                                                                                           type:ColumnDataTypeString
+                                                                                         isNull:NO
+                                                                                           isPK:NO
+                                                                                        default:Nil],
+                                                   [[SimpleRecordColumn alloc] initWithParamers:@"type"
+                                                                                           type:ColumnDataTypeInteger
+                                                                                         isNull:YES
+                                                                                           isPK:NO
+                                                                                        default:Nil],
+                                                   [[SimpleRecordColumn alloc] initWithParamers:@"source"
+                                                                                           type:ColumnDataTypeString
+                                                                                         isNull:YES
+                                                                                           isPK:NO
+                                                                                        default:Nil],
+//                                                   [[SimpleRecordColumn alloc] initWithParamers:@"source_account"
+//                                                                                           type:ColumnDataTypeString
+//                                                                                         isNull:YES
+//                                                                                           isPK:NO
+//                                                                                        default:Nil],
+//                                                   [[SimpleRecordColumn alloc] initWithParamers:@"source_nickname"
+//                                                                                           type:ColumnDataTypeString
+//                                                                                         isNull:YES
+//                                                                                           isPK:NO
+//                                                                                        default:Nil],
+                                                   nil ];
+    SimpleRecordColumn *column1 = [ar objectAtIndex:0];
+    STAssertEqualObjects(column1.name, @"id", [column1 description], nil);
+    SimpleRecordColumn *column4 = [ar objectAtIndex:3];
+    STAssertEqualObjects(column4.name, @"source", [column4 description], nil);
+
+
 }
 
 @end
