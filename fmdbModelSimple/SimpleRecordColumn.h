@@ -20,4 +20,11 @@
 
 - (SimpleRecordColumn *)initWithParamers:(NSString *)name type:(ColumnDataType)type isNull:(BOOL)isNull isPK:(BOOL)isPK default:(id)defaultValue;
 
+- (NSString *)toCreateSQLPart;
+- (NSString *)sqlConvertOfName;
+- (NSString *)sqlConvertOfType;
+- (NSString *)sqlConvertOfIsNull;
+- (NSString *)sqlConvertOfIsPK;
+- (NSString *)sqlConvertOfDefaultValue;
+
 @end

@@ -111,8 +111,16 @@
     STAssertEqualObjects(column1.name, @"id", [column1 description], nil);
     SimpleRecordColumn *column4 = [ar objectAtIndex:3];
     STAssertEqualObjects(column4.name, @"source", [column4 description], nil);
-
-
 }
 
+- (void)testColumntoCreateSQLPart{
+    SimpleRecordColumn *column = [[SimpleRecordColumn alloc] initWithParamers:@"id"
+                                                                        type:ColumnDataTypeInteger
+                                                                      isNull:NO
+                                                                        isPK:YES
+                                                                     default:Nil];
+    NSString *columnString = column.toCreateSQLPart;
+    NSString *expectString = @"id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT ";
+    STAssertTrue([columnString isEqualToString:expectString], columnString, Nil);
+}
 @end

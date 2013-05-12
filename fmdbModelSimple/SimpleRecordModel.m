@@ -31,22 +31,11 @@ FMDatabase *db;
     SimpleRecordColumn *column;
 
     while (column = [enumerator nextObject]) {
-            NSString *columnName = column.name.lowercaseString;
-            enum ColumnDataType *columnType = column.type;
-
-            NSString *columnString = @"";
-
-            if ([columnName isEqualToString:@"id"]) {
-                columnString = @"id INTEGER PRIMARY KEY AUTOINCREMENT";
-            } else if (columnType == ColumnDataTypeInteger) {
-                columnString = [NSString stringWithFormat:@", %@ INTEGER NOT NULL DEFAULT 0", columnName];
-            } else if (columnType == ColumnDataTypeString) {
-                columnString = [NSString stringWithFormat:@", %@ VARCHAR(512) NOT NULL DEFAULT ''", columnName];
-            } else if (columnType == ColumnDataTypeDOUBLE) {
-                columnString = @"id INTEGER PRIMARY KEY AUTOINCREMENT";
+            if(![sqlString isEqualToString:@""]){
+                sqlString = [sqlString stringByAppendingString:@", "];
             }
-
-            sqlString = [sqlString stringByAppendingString:columnString];
+            sqlString = [sqlString stringByAppendingString:column.toCreateSQLPart];
+            NSLog(@"sqlString:%@",column.toCreateSQLPart);
         }
 
     NSString *query = [NSString stringWithFormat:@"CREATE TABLE %@(%@);",
@@ -98,6 +87,7 @@ FMDatabase *db;
 
 
 - (BOOL) save {
+    // FIXME:待重构
     NSString *tableName = [self.class tableName];
     NSMutableDictionary *properties = ar_attributes;
     __block NSString *columnNames = @"";
@@ -116,7 +106,23 @@ FMDatabase *db;
         if ([columnName isEqualToString:@"id"]) {
             columnString = [NSString stringWithFormat:@"'%@'", columnName];
             value = @"NULL";
-        } else {
+        } else if([columnName isEqualToString:@", created_at"]){
+            columnString = [NSString stringWithFormat:@"'%@'", columnName];
+
+            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+            [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+            NSString *strDate = [dateFormatter stringFromDate:[NSDate date]];
+
+            value = [NSString stringWithFormat:@", '%@'", strDate];
+        } else if([columnName isEqualToString:@", updated_at"]){
+            columnString = [NSString stringWithFormat:@"'%@'", columnName];
+
+            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+            [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+            NSString *strDate = [dateFormatter stringFromDate:[NSDate date]];
+
+            value = [NSString stringWithFormat:@", '%@'", strDate];
+        }else {
             columnString = [NSString stringWithFormat:@", '%@'", columnName];
             SEL sel = sel_registerName([columnName UTF8String]);
 #pragma clang diagnostic push  //用于忽略performSelector的“performselector may cause a leak because its selector is unknow”警告
@@ -188,12 +194,24 @@ FMDatabase *db;
 }
 - (NSMutableArray *)attr_accessor:(NSArray *)attributes {
     SimpleRecordColumn *columnID = [[SimpleRecordColumn alloc] initWithParamers:@"id"
-                                                                           type:ColumnDataTypeString
+                                                                           type:ColumnDataTypeInteger
                                                                          isNull:NO
                                                                            isPK:YES
                                                                         default:Nil];
     ar_attributes = [NSMutableArray arrayWithObject:columnID];
     [ar_attributes addObjectsFromArray:attributes];
+    SimpleRecordColumn *columnCreatedAt = [[SimpleRecordColumn alloc] initWithParamers:@"created_at"
+                                                                           type:ColumnDataTypeDate
+                                                                         isNull:NO
+                                                                           isPK:NO
+                                                                        default:Nil];
+    SimpleRecordColumn *columnUpdatedAt = [[SimpleRecordColumn alloc] initWithParamers:@"updated_at"
+                                                                           type:ColumnDataTypeDate
+                                                                         isNull:NO
+                                                                           isPK:NO
+                                                                        default:Nil];
+    [ar_attributes addObject:columnCreatedAt];
+    [ar_attributes addObject:columnUpdatedAt];
 
     return ar_attributes;
 }
@@ -224,6 +242,7 @@ FMDatabase *db;
 }
 
 + (id)parsedObject:(FMResultSet *)fmResultSet {
+    // FIXME: 完成parsedObject
     FMResultSet *s = fmResultSet;
     NSString *tableName = [self tableName];
     NSMutableDictionary *properties = ar_attributes;

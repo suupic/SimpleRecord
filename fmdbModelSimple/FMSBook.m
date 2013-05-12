@@ -17,20 +17,11 @@
 @synthesize source;
 @synthesize sourceAccount;
 @synthesize sourceNickname;
+@synthesize created_at;
+@synthesize updated_at;
 
 - (id)init {
     if (self = [super init]) {
-//        [self attr_accessor:[NSDictionary dictionaryWithObjectsAndKeys:
-//        @"NSInteger", @"id",
-////        @"NSString" , @"name",
-////        @"NSString" , @"avatar",
-////        @"NSInteger", @"type",
-////        @"NSString" , @"source",
-////        @"NSString" , @"sourceAccount",
-//        @"NSString" , @"sourceNickname",nil]];
-//    }
-//    enum ColumnDataType enum_dataType;
-//    enum_dataType = 1;
         [self attr_accessor:[NSArray arrayWithObjects:[[SimpleRecordColumn alloc] initWithParamers:@"name"
                                                                                               type:ColumnDataTypeString
                                                                                             isNull:NO

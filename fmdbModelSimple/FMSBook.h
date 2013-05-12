@@ -18,6 +18,8 @@
 @property (assign, nonatomic) NSNumber *source;                 //来源, enum:userSource
 @property (assign, nonatomic) NSString *sourceNickname;         //来源中的昵称
 @property (assign, nonatomic) NSString *sourceAccount;          //来源账号
+@property (nonatomic)NSDate *created_at;
+@property (nonatomic)NSDate *updated_at;
 
 - (NSString *)description;
 
