@@ -20,7 +20,7 @@ static NSString *dbpath;
 
 @property (nonatomic, strong) FMDatabase *db;
 
-+ (void) use:(NSString *)dbFilePath;                //使用数据文件
++ (void) use:(NSString *)dataFileName;                //使用数据文件
 - (BOOL) establishConnection;                       //建立连接
 
 + (SimpleRecord *)shared;                           //共享对象

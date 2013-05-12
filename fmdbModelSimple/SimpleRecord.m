@@ -35,6 +35,7 @@
 - (BOOL)establishConnection{
     if(!dbpath){
         NSLog(@"dbpath MUST be set.");
+        return NO;
     } else {
         self.db = [FMDatabase databaseWithPath:dbpath];
         if(![self.db open]){
@@ -48,8 +49,10 @@
     }
 }
 
-+ (void) use:(NSString *)dbFilePath {
-    dbpath = dbFilePath;
++ (void) use:(NSString *)dataFileName {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentDirectory = [paths objectAtIndex:0];
+    NSString *dbPath = [documentDirectory stringByAppendingPathComponent:dataFileName];
 }
 
 @end
