@@ -10,6 +10,9 @@
 #import "FMDatabase.h"
 #import "SimpleRecordEnumConstants.h"
 #import "SimpleRecordColumn.h"
+#import "SimpleRecordRelation.h"
+#import "SimpleRecordTable.h"
+#import "SimpleRecordIndex.h"
 
 static NSString *dbpath;
 

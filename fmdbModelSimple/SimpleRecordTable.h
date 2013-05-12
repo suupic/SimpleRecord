@@ -10,7 +10,7 @@
 #import "SimpleRecord.h"
 
 
-@interface SimpleRecordTable : SimpleRecord
+@interface SimpleRecordTable : NSObject
 
 @property (nonatomic, assign) NSMutableArray *relations;
 @property (nonatomic, assign) NSMutableArray *columns;

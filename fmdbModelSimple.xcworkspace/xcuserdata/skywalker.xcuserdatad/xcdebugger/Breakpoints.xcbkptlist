@@ -26,7 +26,7 @@
          endingLineNumber = "77">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "fmdbModelSimple/SimpleRecord.m"
@@ -36,6 +36,32 @@
          startingLineNumber = "43"
          endingLineNumber = "43"
          landmarkName = "-establishConnection"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "fmdbModelSimpleTests/fmdbModelSimpleTests.m"
+         timestampString = "390037935.114885"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "40"
+         endingLineNumber = "40"
+         landmarkName = "-testSimpleRecordSharedDBGoodConnection"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "fmdbModelSimpleTests/fmdbModelSimpleTests.m"
+         timestampString = "390037935.114885"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "74"
+         endingLineNumber = "74"
+         landmarkName = "-testFindOne"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

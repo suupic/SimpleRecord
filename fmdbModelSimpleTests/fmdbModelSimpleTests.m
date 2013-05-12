@@ -7,7 +7,6 @@
 //
 
 #import "fmdbModelSimpleTests.h"
-#import "FMSBook.h"
 
 @implementation fmdbModelSimpleTests
 @synthesize book;
@@ -16,8 +15,13 @@
 {
     [super setUp];
 
-    book = [[FMSBook alloc] init];
     // Set-up code here.
+
+    [SimpleRecord use:@"/tmp/simpleRecordTesting.db"];
+    book = [[FMSBook alloc] init];
+    [FMSBook createTable];
+    book.name = @"testbook12";
+    book.authorId = [NSNumber numberWithInt:5];
 }
 
 - (void)tearDown
@@ -25,29 +29,30 @@
     // Tear-down code here.
 
     [super tearDown];
+    [FMSBook dropTable];
 }
 
-- (void)testExample
-{
-    STFail(@"Unit tests are not implemented yet in fmdbModelSimpleTests");
+- (void)testSimpleRecordShared{
+    STAssertFalse(![SimpleRecord shared], [SimpleRecord shared].description);
+}
+
+- (void)testSimpleRecordSharedDBGoodConnection{
+    db = [[SimpleRecord shared] db];
+    STAssertTrue(db.goodConnection, Nil);
 }
 
 - (void)testSave {
-    book.name = @"testbook12";
-    book.authorId = [NSNumber numberWithInt:5];
-    STAssertTrue(book.save, @"cannot be save.", nil);
+    BOOL boolResult = book.save;
+    STAssertTrue(boolResult, nil);
 }
 
 - (void)testCreateTable {
-    STAssertTrue([FMSBook createTable], @"must success.", nil);
+    [FMSBook dropTable];
+    STAssertTrue([FMSBook createTable], nil);
 }
 
 - (void)testDropTable {
-//  [FMSBook dropTable];
-}
-
-- (void)testSave {
-
+    STAssertTrue([FMSBook dropTable], nil);
 }
 
 - (void)testUpdate {
@@ -56,6 +61,17 @@
 
 - (void)testFindByUID {
 
+}
+
+- (void)testFindOne {
+    book.name=@"hello";
+    book.save;
+    FMResultSet *rs = [FMSBook findOne];
+    NSString *name = @"";
+    if([rs next]){
+        name = [rs stringForColumn:@"name"];
+    }
+    STAssertTrue([name isEqualToString:book.name], name.description);
 }
 
 @end

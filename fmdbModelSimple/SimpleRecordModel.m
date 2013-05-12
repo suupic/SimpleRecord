@@ -86,6 +86,7 @@ FMDatabase *db;
 
     if([db executeUpdate:queryString]){
         NSLog(@"Drop table success.");
+        return YES;
     }
     else{
         NSLog(@"Drop table failed: %@, %d", [db lastError], [db lastErrorCode]);

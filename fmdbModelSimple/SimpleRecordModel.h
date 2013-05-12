@@ -40,6 +40,9 @@ static NSMutableDictionary *ar_attributes;
 + (id)findById:(NSInteger)uid;              //参数使用uid，避免与id类型冲突
 + (BOOL)deleteById:(NSInteger)uid;
 + (NSString *) tableName;
++ (SimpleRecordRelation *)has_one:(SimpleRecordModel *)table;
++ (SimpleRecordRelation *)has_many:(SimpleRecordModel *)table;
++ (SimpleRecordRelation *)has_many:(SimpleRecordModel *)table through:(SimpleRecordModel *)table;
 
 - (NSMutableDictionary *)attr_accessor:(NSDictionary *)attributes;
 @end

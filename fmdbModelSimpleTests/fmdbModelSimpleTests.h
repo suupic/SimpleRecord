@@ -8,10 +8,12 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 #import "SimpleRecord.h"
+#import "FMSBook.h"
+
 
 @class FMSBook;
 
-@interface fmdbModelSimpleTests :
+@interface fmdbModelSimpleTests : SenTestCase
 
 @property (nonatomic, strong) FMSBook *book;
 - (void)testCreateTable;

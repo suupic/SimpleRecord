@@ -26,6 +26,8 @@
 		9D95123D1734388700A2472F /* FMSBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D95123C1734388700A2472F /* FMSBook.m */; };
 		9D9512401734392900A2472F /* FMSAuthor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D95123F1734392900A2472F /* FMSAuthor.m */; };
 		9D95124217343B9600A2472F /* libobjc.A.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D95124117343B9600A2472F /* libobjc.A.dylib */; };
+		9DF21A1B173F6FF9000DD1DF /* FMSBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D95123C1734388700A2472F /* FMSBook.m */; };
+		9DF21A1C173F7021000DD1DF /* FMSAuthor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D95123F1734392900A2472F /* FMSAuthor.m */; };
 		D747F166769FA387C760F869 /* SimpleRecordIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = D747FF01A290D24A1D89F1CC /* SimpleRecordIndex.m */; };
 		D747F21B29562B31522829CC /* SimpleRecordColumn.m in Sources */ = {isa = PBXBuildFile; fileRef = D747F0A6D417993F81260662 /* SimpleRecordColumn.m */; };
 		D747F33DBC5A22DA512D5104 /* SimpleRecordTable.m in Sources */ = {isa = PBXBuildFile; fileRef = D747F0828141AF6198848CBA /* SimpleRecordTable.m */; };
@@ -388,6 +390,8 @@
 				D747F33DBC5A22DA512D5104 /* SimpleRecordTable.m in Sources */,
 				D747FF6FD7C86D1620EF4133 /* SimpleRecordRelation.m in Sources */,
 				D747F166769FA387C760F869 /* SimpleRecordIndex.m in Sources */,
+				9DF21A1B173F6FF9000DD1DF /* FMSBook.m in Sources */,
+				9DF21A1C173F7021000DD1DF /* FMSAuthor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
