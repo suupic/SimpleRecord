@@ -17,7 +17,7 @@
 
     // Set-up code here.
 
-    [SimpleRecord use:@"/tmp/simpleRecordTesting.db"];
+    [SimpleRecord use:@"simpleRecordTesting.db"];
     book = [[FMSBook alloc] init];
     [FMSBook createTable];
     book.name = @"testbook12";

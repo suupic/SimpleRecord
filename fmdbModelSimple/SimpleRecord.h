@@ -14,7 +14,7 @@
 #import "SimpleRecordTable.h"
 #import "SimpleRecordIndex.h"
 
-static NSString *dbpath;
+static NSString *dbPath;
 
 @interface SimpleRecord : NSObject
 

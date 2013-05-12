@@ -4,6 +4,7 @@
     <list default="true" id="192af39a-8aa1-42c1-bd3b-3c97412f7387" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fmdbModelSimple/SimpleRecord.h" afterPath="$PROJECT_DIR$/fmdbModelSimple/SimpleRecord.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fmdbModelSimple/SimpleRecord.m" afterPath="$PROJECT_DIR$/fmdbModelSimple/SimpleRecord.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fmdbModelSimpleTests/fmdbModelSimpleTests.m" afterPath="$PROJECT_DIR$/fmdbModelSimpleTests/fmdbModelSimpleTests.m" />
     </list>
     <ignored path="fmdbModelSimple.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -21,7 +22,7 @@
     <file path="/fmdbModelSimpleTests.m" changelist="192af39a-8aa1-42c1-bd3b-3c97412f7387" time="1368259461931" ignored="false" />
     <file path="/fragment.mm" changelist="192af39a-8aa1-42c1-bd3b-3c97412f7387" time="1368291006523" ignored="false" />
     <file path="/fmdbModelSimple-Prefix.pch" changelist="192af39a-8aa1-42c1-bd3b-3c97412f7387" time="1368291257950" ignored="false" />
-    <file path="/SimpleRecord.m" changelist="192af39a-8aa1-42c1-bd3b-3c97412f7387" time="1368295702359" ignored="false" />
+    <file path="/SimpleRecord.m" changelist="192af39a-8aa1-42c1-bd3b-3c97412f7387" time="1368351387063" ignored="false" />
     <file path="/SimpleRecord.h" changelist="192af39a-8aa1-42c1-bd3b-3c97412f7387" time="1368317557607" ignored="false" />
     <file path="$PROJECT_DIR$/../bluetiger/AA/Classes/Models/Book/BTTBookModel.h" changelist="192af39a-8aa1-42c1-bd3b-3c97412f7387" time="1368297346397" ignored="false" />
     <file path="/BTTBookModel.h" changelist="192af39a-8aa1-42c1-bd3b-3c97412f7387" time="1368297336907" ignored="false" />
@@ -76,10 +77,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SimpleRecord.h" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="SimpleRecord.h" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fmdbModelSimple/SimpleRecord.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="37" selection-start="537" selection-end="537" vertical-scroll-proportion="0.0">
+            <state line="27" column="36" selection-start="687" selection-end="687" vertical-scroll-proportion="1.08">
               <folding>
                 <element signature="e#171#204#0" expanded="true" />
               </folding>
@@ -87,10 +88,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SimpleRecord.m" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SimpleRecord.m" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fmdbModelSimple/SimpleRecord.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="61" selection-start="916" selection-end="916" vertical-scroll-proportion="0.52">
+            <state line="54" column="10" selection-start="1202" selection-end="1202" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -119,7 +120,7 @@
       <file leaf-file-name="fmdbModelSimpleTests.m" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fmdbModelSimpleTests/fmdbModelSimpleTests.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="20" selection-start="844" selection-end="844" vertical-scroll-proportion="0.0">
+            <state line="19" column="24" selection-start="330" selection-end="330" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -143,7 +144,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/fmdbModelSimpleTests/fmdbModelSimpleTests.m" />
         <option value="$PROJECT_DIR$/fmdbModelSimple/fmdbModelSimple-Prefix.pch" />
         <option value="$PROJECT_DIR$/fmdbModelSimple/AR.h" />
         <option value="$PROJECT_DIR$/fmdbModelSimple/ARModel.m" />
@@ -157,8 +157,9 @@
         <option value="$PROJECT_DIR$/fmdbModelSimple/SimpleRecordTable.h" />
         <option value="$PROJECT_DIR$/fmdbModelSimple/SimpleRecordModel.h" />
         <option value="$PROJECT_DIR$/fmdbModelSimpleTests/fmdbModelSimpleTests.h" />
-        <option value="$PROJECT_DIR$/fmdbModelSimple/SimpleRecord.h" />
+        <option value="$PROJECT_DIR$/fmdbModelSimpleTests/fmdbModelSimpleTests.m" />
         <option value="$PROJECT_DIR$/fmdbModelSimple/SimpleRecord.m" />
+        <option value="$PROJECT_DIR$/fmdbModelSimple/SimpleRecord.h" />
       </list>
     </option>
   </component>
@@ -402,9 +403,10 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41033435" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16041501" sideWeight="0.28267476" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20430966" sideWeight="0.39209726" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.387538" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.387538" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20430966" sideWeight="0.22036473" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29179332" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -412,7 +414,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -580,24 +581,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fmdbModelSimpleTests/fmdbModelSimpleTests.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="20" selection-start="844" selection-end="844" vertical-scroll-proportion="0.0">
+        <state line="19" column="24" selection-start="330" selection-end="330" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fmdbModelSimple/SimpleRecord.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="10" selection-start="1202" selection-end="1202" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fmdbModelSimple/SimpleRecord.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="37" selection-start="537" selection-end="537" vertical-scroll-proportion="0.0">
+        <state line="27" column="36" selection-start="687" selection-end="687" vertical-scroll-proportion="1.08">
           <folding>
             <element signature="e#171#204#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fmdbModelSimple/SimpleRecord.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="61" selection-start="916" selection-end="916" vertical-scroll-proportion="0.52">
-          <folding />
         </state>
       </provider>
     </entry>

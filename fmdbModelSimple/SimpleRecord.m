@@ -33,15 +33,15 @@
 }
 
 - (BOOL)establishConnection{
-    if(!dbpath){
-        NSLog(@"dbpath MUST be set.");
+    if(!dbPath){
+        NSLog(@"dbPath MUST be set.");
         return NO;
     } else {
-        self.db = [FMDatabase databaseWithPath:dbpath];
+        self.db = [FMDatabase databaseWithPath:dbPath];
         if(![self.db open]){
-            NSLog(@"Failed to establish connection to %@", dbpath);
+            NSLog(@"Failed to establish connection to %@", dbPath);
         } else {
-            NSLog(@"Connection established to %@", dbpath);
+            NSLog(@"Connection established to %@", dbPath);
         }
 
         self.db.logsErrors = YES;
@@ -52,7 +52,7 @@
 + (void) use:(NSString *)dataFileName {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentDirectory = [paths objectAtIndex:0];
-    NSString *dbPath = [documentDirectory stringByAppendingPathComponent:dataFileName];
+    dbPath = [documentDirectory stringByAppendingPathComponent:dataFileName];
 }
 
 @end
