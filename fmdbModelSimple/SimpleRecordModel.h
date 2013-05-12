@@ -37,7 +37,7 @@ static NSMutableDictionary *ar_attributes;
 + (BOOL) isTableExist;
 + (FMResultSet *) findAll;
 + (FMResultSet *) findOne;
-+ (id)findById:(NSInteger)uid;
++ (id)findById:(NSInteger)uid;              //参数使用uid，避免与id类型冲突
 + (BOOL)deleteById:(NSInteger)uid;
 + (NSString *) tableName;
 
