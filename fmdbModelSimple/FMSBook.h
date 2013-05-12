@@ -11,7 +11,7 @@
 
 @interface FMSBook : SimpleRecordModel <SimpleRecordModelDelegate, NSCoding>
 
-@property (nonatomic)NSInteger *uid;
+@property (nonatomic)NSInteger id;
 @property (nonatomic)NSString *name;
 @property (nonatomic)NSNumber *authorId;
 

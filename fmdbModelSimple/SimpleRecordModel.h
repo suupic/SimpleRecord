@@ -27,7 +27,7 @@ static NSMutableDictionary *ar_attributes;
 
 // define delegate property
 @property (nonatomic, assign) id delegate;
-@property (nonatomic, assign) NSInteger uid;
+@property (nonatomic, assign) NSInteger id;
 
 - (BOOL) save;
 - (BOOL) updateAttributes:(NSDictionary *)attributes;
@@ -37,8 +37,8 @@ static NSMutableDictionary *ar_attributes;
 + (BOOL) isTableExist;
 + (FMResultSet *) findAll;
 + (FMResultSet *) findOne;
-+ (id) findByUID:(NSInteger)uid;
-+ (BOOL) deleteByUID:(NSInteger)uid;
++ (id)findById:(NSInteger)uid;
++ (BOOL)deleteById:(NSInteger)uid;
 + (NSString *) tableName;
 
 - (NSMutableDictionary *)attr_accessor:(NSDictionary *)attributes;

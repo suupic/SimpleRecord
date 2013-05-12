@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "FMDatabase.h"
 #import "SimpleRecordEnumConstants.h"
+#import "SimpleRecordColumn.h"
 
 static NSString *dbpath;
 

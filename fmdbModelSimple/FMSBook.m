@@ -10,7 +10,7 @@
 
 @implementation FMSBook
 
-@synthesize uid;
+@synthesize id;
 @synthesize name;
 @synthesize authorId;
 

@@ -14,7 +14,7 @@ FMDatabase *db;
 @implementation SimpleRecordModel
 
 @synthesize delegate;
-@synthesize uid;
+@synthesize id;
 
 - (id)init {
     if (self = [super init]) {
@@ -34,14 +34,14 @@ FMDatabase *db;
 
         NSString *columnString = @"";
 
-        if([columnName isEqualToString:@"uid"]) {
-            columnString = @"uid INTEGER PRIMARY KEY AUTOINCREMENT";
+        if([columnName isEqualToString:@"id"]) {
+            columnString = @"id INTEGER PRIMARY KEY AUTOINCREMENT";
         } else if([columnType isEqualToString:@"nsinteger"]){
             columnString = [NSString stringWithFormat:@", %@ INTEGER NOT NULL DEFAULT 0", columnName];
         } else if([columnType isEqualToString:@"nsstring"]){
             columnString = [NSString stringWithFormat:@", %@ VARCHAR(512) NOT NULL DEFAULT ''", columnName];
         } else if([columnType isEqualToString:@"nsdate"]){
-            columnString = @"uid INTEGER PRIMARY KEY AUTOINCREMENT";
+            columnString = @"id INTEGER PRIMARY KEY AUTOINCREMENT";
         }
 
         sqlString = [sqlString stringByAppendingString:columnString] ;
@@ -106,7 +106,7 @@ FMDatabase *db;
         NSString *columnName = @"";
         NSString *value = @"";
 
-        if ([propertyName isEqualToString:@"uid"]) {
+        if ([propertyName isEqualToString:@"id"]) {
             columnName = [NSString stringWithFormat:@"'%@'", propertyName];
             value = @"NULL";
         } else {
@@ -153,7 +153,7 @@ FMDatabase *db;
 }
 - (NSMutableDictionary *)attr_accessor:(NSDictionary *)attributes {
     ar_attributes = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-            @"NSInteger" , @"uid", nil];
+            @"NSInteger" , @"id", nil];
     [ar_attributes addEntriesFromDictionary:attributes];
     return ar_attributes;
 }
@@ -173,13 +173,13 @@ FMDatabase *db;
     return s;
 }
 
-+ (id)findByUID:(NSInteger)uid {
-    FMResultSet *s = [db executeQuery:[NSString stringWithFormat:@"SELECT * FROM %@ WHERE uid=%d;", [self tableName], uid]];
++ (id)findById:(NSInteger)uid {
+    FMResultSet *s = [db executeQuery:[NSString stringWithFormat:@"SELECT * FROM %@ WHERE id=%d;", [self tableName], uid]];
     id obj = [self.class parsedObject:s];
     return obj;
 }
 
-+ (BOOL)deleteByUID:(NSInteger)uid {
++ (BOOL)deleteById:(NSInteger)uid {
     return NO;
 }
 
